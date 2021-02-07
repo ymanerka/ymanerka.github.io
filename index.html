@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+    zenlike1.0 by nodethirtythree design
+    http://www.nodethirtythree.com
+
+-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Yatin Manerkar</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+
+<div id="upbg"></div>
+
+<div id="outer">
+
+
+    <div id="header">
+    <div id="headercontent">
+        <h1>Yatin Manerkar</h1>
+        <div class="subtext">Assistant Professor, University of Michigan (beginning Fall 2021)</div>
+            <!--<img src="images/princeton_logo.png"/>-->
+    </div>
+    </div>
+
+    <!--<form method="post" action="">
+    <div id="search">
+        <input type="text" class="text" maxlength="64" name="keywords" />
+        <input type="submit" class="submit" value="Search" />
+    </div>
+    </form>-->
+
+    <div id="headerpic"></div>
+    
+    <div id="menu">
+        <!-- HINT: Set the class of any menu link below to "active" to make it appear active -->
+    </div>
+    <div id="menubottom"></div>
+    
+    <div id="content">
+        <!-- Normal content: Stuff that's not going to be put in the left or right column. -->
+        <div id="normalcontent">
+        <div class="contentarea">
+            <!-- Normal content area start -->
+            <img src="images/profile_pic_new.jpg" class="left" alt="Profile picture" />
+                <p>I am an incoming Assistant Professor in the Computer Science and Engineering (CSE) Department at the University of Michigan beginning Fall 2021. I recently completed my PhD in the Princeton Computer Science department, advised by <a href="../~mrm/">Prof. Margaret Martonosi.</a> I am currently doing a "pre-battical" with <a href="http://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a> at UC Berkeley in between graduation and starting at Michigan.
+                
+                <p>My research lies on the boundary between computer architecture and formal methods, and focuses on developing automated formal methodologies and tools for the design and verification of computing systems. My work spans the hardware/software stack, from high-level programming languages down to low-level Verilog circuits. During my PhD, my research focused on the verification of memory consistency model (MCM) properties in parallel hardware and software. MCMs specify the ordering rules for memory operations used for communication and synchronization in shared-memory parallel programs, so MCM verification is critical to parallel system correctness. My work has found real-world bugs in <a href="https://arxiv.org/pdf/1611.01507.pdf">C++ compilers</a>, <a href="papers/MICRO-50_Manerkar.pdf">an open-source processor implementation in Verilog</a>, and in <a href="papers/ctrippel_ASPLOS17.pdf">the widely-used RISC-V instruction set (ISA)</a>. My work has also enriched the formal methods community by developing new formal analysis techniques.</p>
+
+                <p>Before joining Princeton, I completed my BASc in Computer Engineering at the
+                <a href="https://uwaterloo.ca/electrical-computer-engineering">University of Waterloo</a> and a M.S. in Computer
+                Science and Engineering at the <a href="http://cse.umich.edu">University of Michigan.</a> I also worked full-time
+                at <a href="https://www.qualcomm.com/invention/research">Qualcomm Research</a> for one year.</p>
+                <p> I was a recipient of Princeton's Wallace Memorial Fellowship for the 2018-2019 academic year. The Wallace Memorial Fellowship is a <a href="https://gradschool.princeton.edu/costs-funding/sources-funding/fellowships/competitive">Princeton Honorific Fellowship</a> which provides funding to students displaying the highest scholarly excellence in graduate work during the year. I also received the 2019 Award for Excellence from Princeton's School of Engineering and Applied Sciences (SEAS).</p>
+                <p> I was selected to attend the 7th <a href="https://www.heidelberg-laureate-forum.org/">Heidelberg Laureate Forum (HLF)</a> in September 2019. The HLF is an annual event where 200 young researchers in computer science and mathematics participate in a weeklong scientific exchange with recipients of the top awards in computing and mathematics (Turing Award, Abel Prize, Fields Medal, ACM Prize in Computing, and the Nevanlinna Prize).</p>
+                <p>My CV can be found <a href="docs/manerkar_CV.pdf">here</a>.</p>
+                <!-- Normal content area end -->
+            </div>
+        </div>
+
+        <div class="divider1"></div>
+
+        <!-- Primary content: Stuff that goes in the primary content column (by default, the left column) -->
+        <div id="primarycontainer">
+            <div id="primarycontent">
+                <div class="post">
+                    <h3>Research</h3>
+                    <div class="contentarea">
+                    <p><a href="docs/manerkar_research_statement.pdf">Research Statement</a></p>
+
+<p>We entrust large parts of our daily lives to computer systems, and these systems require thorough verification to ensure their correctness. System vulnerabilities can lead to leakage of confidential information, loss of money, and (in the case of cyber-physical systems) may even threaten one's physical safety and security. Many such bugs have in fact been found in computing systems in recent years, ranging from security vulnerabilities (like Meltdown and Spectre) to network errors to concurrency bugs.</p>
+
+<p>Some important bugs are due to flaws in system design/specification, while others are due to implementations violating the design specification. Since verification is generally focused late in development, bugs tend to get caught late in development as well. Design bugs may necessitate a redesign, wasting the development time spent creating incorrect implementations. Furthermore, many bugs only occur in very specific scenarios, making them hard to find. Current verification processes have proven inadequate for catching these bugs, resulting in the release of flawed hardware and software.</p>
+
+<p>Verification using formal methods provides strong correctness guarantees based on mathematical proofs, and is adept at catching hard-to-find bugs. My work aims to improve the verification of hardware and software using formal methods, without requiring engineers to have formal methods expertise. I propose a philosophy of <b>Progressive Automated Formal Verification</b>, i.e. verification throughout the system development process, from early-stage design through to final implementation.
+Progressive verification has multiple benefits, including reductions in verification overhead and in overall development time.
+Automating formal verification also enables engineering teams to prove strong correctness properties about their designs and implementations by themselves, shifting the verification burden away from the relatively small number of formal methods experts.</p>
+
+<p>In progressive verification, formal models of systems are first created and verified during early-stage design, thus catching design bugs <i>before</i> implementation commences. These models can then evolve to become more detailed as system design progresses. Once the system is implemented, the implementation is formally verified against a proven-correct design model to help ensure implementation correctness. The number of steps in a progressive verification flow may vary depending on the type of system being built, but the key idea is to conduct verification throughout the design timeline and link the verification methods at each stage together.</p>
+
+<p>The work in my dissertation constitutes a concrete instance of a progressive verification flow for MCM properties in parallel processors. However, progressive verification is a generic flow, and is applicable to other types of properties like hardware security properties. It is also applicable to other types of systems like cyber-physical systems.</p>
+                    </div>
+                </div>
+        
+                <div class="divider2"></div>
+                <div class="post">
+                    <h3>Publications</h3><br/><br/>
+                    <h4><u>Refereed Publications</u></h4>
+                    <div class="contentarea">
+                        <ul>
+                        <li>
+                        <p><b>Yatin A. Manerkar</b>, Daniel Lustig, Margaret Martonosi, and Aarti Gupta.
+                        PipeProof: Automated Memory Consistency Proofs for Microarchitectural Specifications. The 51st Annual IEEE/ACM
+                        International Symposium on Microarchitecture (MICRO), October 2018.<br/>
+			<b>Nominated for best paper.</b><br/>
+            <b>Selected as a IEEE MICRO Top Picks Honorable Mention from the 2018 Computer Architecture Conferences.</b><br/>
+			[<a href="papers/manerkar_MICRO18.pdf">PDF</a>]
+			[<a href="slides/pipeproof_slides.pdf">Slides</a>]
+			[<a href="posters/pipeproof_poster.pdf">Poster</a>]
+			[<a href="https://github.com/ymanerka/pipeproof">GitHub</a>]
+            </p>
+			</li>
+                        <li>
+                        <p>Hongce Zhang, Caroline Trippel, <b>Yatin A. Manerkar</b>, Aarti Gupta, Margaret Martonosi, and Sharad Malik.
+                        Integrating Memory Consistency Models with Instruction-Level Abstraction for Heterogeneous System-on-Chip Verification.
+                        The 18th Conference on Formal Methods in Computer-Aided Design (FMCAD), October 2018.<br/>
+			[PDF]</p>
+			</li>
+                        <li>
+                        <p>Caroline Trippel, <b>Yatin A. Manerkar</b>, Daniel Lustig, Michael Pellauer, and Margaret Martonosi. "Full-Stack Memory Model Verification with TriCheck". IEEE Micro, 38 (3) (Top Picks of the 2017 Computer Architecture Conferences), May-June 2018.<br/>
+			[<a href="papers/ctrippel_IEEETopPicks18.pdf">PDF</a>]
+			</p>
+			</li>
+                        <li>
+                        <p><b>Yatin A. Manerkar</b>, Daniel Lustig, Margaret Martonosi, and Michael Pellauer.
+                        RTLCheck: Verifying the Memory Consistency of RTL Designs. The 50th Annual IEEE/ACM
+                        International Symposium on Microarchitecture (MICRO), October 2017.<br/>
+                        <b>Selected as a IEEE MICRO Top Picks Honorable Mention from the 2017 Computer Architecture Conferences.</b><br/>
+			[<a href="papers/MICRO-50_Manerkar.pdf">PDF</a>]
+			[<a href="slides/RTLCheck_slides_5A-2.pdf">Slides</a>]
+			[<a href="posters/RTLCheck_poster.pdf">Poster</a>]
+			[<a href="https://github.com/ymanerka/rtlcheck">GitHub</a>]</p>
+			</li>
+                        <li>
+                        <p>Caroline Trippel, <b>Yatin A. Manerkar</b>, Daniel Lustig, Michael Pellauer, and Margaret Martonosi.
+                        TriCheck: Memory Model Verification at the Trisection of Software, Hardware, and ISA. The 22nd International
+			Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), April 2017.<br/>
+                        <b>Selected as a IEEE MICRO Top Pick from the 2017 Computer Architecture Conferences.</b><br/>
+			[<a href="papers/ctrippel_ASPLOS17.pdf">PDF</a>]
+			</p>
+			</li>
+			<li>
+                        <p><b>Yatin A. Manerkar</b>, Daniel Lustig, Michael Pellauer, and Margaret Martonosi.
+                        CCICheck: Using µhb Graphs to Verify the Coherence-Consistency Interface. The 48th Annual IEEE/ACM
+                        International Symposium on Microarchitecture (MICRO), December 2015.<br/>
+			<b>Nominated for best paper.</b><br/> [<a href="papers/MICRO2015_Yatin_Manerkar.pdf">PDF</a>]
+			[<a href="slides/MICRO2015_CCICheck_Slides.pdf">Slides</a>]
+			[<a href="posters/MICRO2015_CCICheck_Poster.pdf">Poster</a>]
+			[<a href="https://github.com/ymanerka/ccicheck">GitHub</a>]</p>
+			</li>
+			</ul>
+                    </div>
+
+                    <h4><u>Non-Refereed Publications</u></h4>
+                    <div class="contentarea">
+                        <ul>
+			<li>
+			<p><b>Yatin A. Manerkar</b>, Daniel Lustig, and Margaret Martonosi.
+            RealityCheck: Bringing Modularity, Hierarchy, and Abstraction to Automated Microarchitectural Memory Consistency Verification.
+			CoRR abs/2003.04892, March 2020.<br/>
+			[<a href="https://arxiv.org/pdf/2003.04892.pdf">PDF</a>]
+			</p>
+			</li>
+			<li>
+			<p><b>Yatin A. Manerkar</b>, Caroline Trippel, Daniel Lustig, Michael Pellauer, and Margaret Martonosi.
+			Counterexamples and Proof Loophole for the C/C++ to POWER and ARMv7 Trailing-Sync Compiler Mappings.
+			CoRR abs/1611.01507, November 2016.<br/>
+			[<a href="https://arxiv.org/pdf/1611.01507.pdf">PDF</a>]
+			</p>
+			</li>
+			</ul>
+		    </div>
+
+                    <h4><u>Thesis</u></h4>
+                    <div class="contentarea">
+                        <ul>
+			<li>
+			<p><b>Yatin A. Manerkar</b>.
+            Progressive Automated Formal Verification of Memory Consistency in Parallel Processors.
+            PhD thesis, Princeton University, December 2020.<br/>
+			[<a href="thesis/manerkar_thesis.pdf">PDF</a>]
+			</p>
+			</li>
+                        </ul>
+		    </div>
+                </div>
+
+                <div class="divider2"></div>
+                <div class="post">
+                    <h3>Invited Talks</h3><br/><br/>
+                    <div class="contentarea">
+			<ul>
+			<li><p><b>Progressive Automated Formal Verification of Hardware and Software Systems.</b><br/>
+            University of Illinois Urbana-Champaign, Urbana IL, April 2020.<br/>
+            Pennsylvania State University, State College PA, March 2020.<br/>
+            Carnegie Mellon University, Pittsburgh PA, March 2020.<br/>
+            University of Michigan, Ann Arbor MI, March 2020.<br/>
+            Georgia Institute of Technology, Atlanta GA, February 2020.<br/>
+            Rising Stars in Computer Architecture (RISC-A) Workshop, Atlanta GA, October 2019.<br/>
+			<li><p><b>Automated Formal Memory Consistency Verification of Hardware.</b><br/>
+			DeepSpec Workshop at PLDI 2019, Phoenix AZ. June 2019.<br/>
+			[<a href="slides/manerkar_deepspec.pdf">Slides</a>]</p></li>
+			<li><p><b>Automated Formal Verification of Event Orderings in Parallel Hardware and Software.</b><br/>
+            University of Toronto, Toronto ON, Canada, March 2019.<br/>
+			<li><p><b>Automated Full-Stack Memory Model Verification with the Check Suite.</b><br/>
+			Imperial College London, UK, July 2018.<br/>
+			University of Cambridge, UK, July 2018.<br/>
+			ARM Cambridge, UK, July 2018.<br/>
+			[<a href="slides/manerkar_ARM_slides.pdf">Slides</a>]</p></li>
+			<li><p><b>C11 Compiler Mappings: Exploration, Verification, and Counterexamples.</b><br/>
+			Dagstuhl Seminar 16471: Concurrency with Weak Memory Models. November 2016.<br/>
+			[<a href="slides/Manerkar_Dagstuhl_slides.pdf">Slides</a>]</p></li>
+			</ul>
+                    </div>
+		</div>
+
+                <div class="divider2"></div>
+                <div class="post">
+                    <h3>Links</h3><br/><br/>
+                    <div class="contentarea">
+			<ul>
+			<li><a href="https://check.cs.princeton.edu/">Memory Model Verification Research Webpage</a></li>
+			<li><a href="https://mrmgroup.cs.princeton.edu/">Martonosi Research Group Webpage</a></li>
+			</ul>
+                    </div>
+		</div>
+        
+                <!--<div class="divider2"></div>
+        
+                <div class="post">
+                    <h4>Consequat Odio Vestibulum</h4>
+                    <div class="contentarea">
+                        <div class="details">Posted by <a href="#">Jane Doe</a> on September 25, 2006</div> 
+                        <img src="images/pic3.jpg" class="left" alt="A chinese dragon" />
+                        <p>Aenean felis quisque eros. Cras lobortis commodo lorem ipsum dolor. Vestibulum vel purus. In eget odio in sapien adipiscing blandit. Lorem ipsum dolor sit amet consequat etiam sed dolore.</p>
+                        <ul class="controls">
+                            <li><a href="#" class="printerfriendly">Printer Friendly</a></li>
+                            <li><a href="#" class="comments">Comments (18)</a></li>
+                            <li><a href="#" class="more">Read More</a></li>             
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="divider2"></div>
+        
+                <div class="post">
+                    <h4>Adipiscing Nullam</h4>
+                    <div class="contentarea">
+                        <div class="details">Posted by <a href="#">Jane Doe</a> on September 25, 2006</div> 
+                        <p>Eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit vitae, cursus sed, arcu lorem ipsum dolor sit amet felis quisque eros. Cras lobortis commodo lorem ipsum dolor. Vestibulum vel purus. In eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit lorem ipsum dolor.</p>
+                        <ul class="controls">
+                            <li><a href="#" class="printerfriendly">Printer Friendly</a></li>
+                            <li><a href="#" class="comments">Comments (18)</a></li>
+                            <li><a href="#" class="more">Read More</a></li>             
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+    <div id="footer">
+            <div class="left">&copy; 2021 Yatin Manerkar. All rights reserved.</div>
+            <div class="right">Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree Design</a></div>
+    </div>
+    
+</div>
+
+</body>
+</html>
